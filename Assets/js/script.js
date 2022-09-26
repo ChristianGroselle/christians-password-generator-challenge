@@ -16,6 +16,7 @@ function generatePassword() {
     var activeList = '';
     var workingPassword = '';
 
+    //prompting the user as to what characters to include in the password
     var passLower = confirm("Would you like to include Lowercase letters in your password?\nSelect 'OK' for yes or 'Cancel' for no");
 
     var passUpper = confirm("Would you like to include Uppercase letters in your password?\nSelect 'OK' for yes or 'Cancel' for no");
@@ -48,7 +49,6 @@ function generatePassword() {
     }
 
     //generating password
-    console.log('preloop\npasslength = ' + passLength + '\nActiveList length = ' + activeList.length);
     for(let i = 0; i < passLength; i++){
       workingPassword += activeList.charAt(Math.floor(Math.random() * activeList.length));
     }
